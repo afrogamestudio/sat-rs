@@ -1,0 +1,62 @@
+
+
+// pub fn combine_vectors<T>(a: Vec<T>, b: Vec<T>) -> Vec<T>
+// {
+//     let mut c = Vec::from(a);
+//     c.extend(b);
+//     c
+// }
+
+
+// fn test_circle_circle(a: Circle, b: Circle) -> Option<Response>
+// {
+//     let difference_v = b.pos - a.pos;
+//     let total_radius = a.radius + b.radius;
+//     let total_radius_sq = total_radius * total_radius;
+//     let distance_sq = difference_v.length2();
+//     if distance_sq > total_radius_sq
+//     {
+//         return Option::None;
+//     }
+//     else
+//     {
+//         let dist = distance_sq.sqrt();
+//         let overlap = total_radius - dist;
+
+//         Option::from(Response {
+//             a,
+//             b,
+//             overlap,
+//             overlap_n: difference_v.normalize(),
+//             overlap_v: difference_v.scale(overlap),
+//             a_in_b: a.radius <= b.radius && dist <= b.radius - a.radius,
+//             b_in_a: b.radius <= a.radius && dist <= a.radius - b.radius
+//         });
+//     }
+// }
+
+// enum VornoiRegion
+// {
+//     LEFT_VORNOI_REGION = -1,
+//     MIDDLE_VORNOI_REGION = 0,
+//     RIGHT_VORNOI_REGION = 1
+// }
+
+// fn vornoi_region(line: Vector2d, point: Vector2d) -> VornoiRegion
+// {
+//     let len2 = line.len2();
+//     let dp = point.dot(line);
+
+//     if dp < 0
+//     {
+//         return VornoiRegion.LEFT_VORNOI_REGION;
+//     }
+//     else if dp > len2
+//     {
+//         return VornoiRegion.RIGHT_VORNOI_REGION;
+//     }
+//     else
+//     {
+//         return VornoiRegion.MIDDLE_VORNOI_REGION;
+//     }
+// }
